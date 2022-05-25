@@ -1,0 +1,14 @@
+{
+  "canisters": {
+    "chat": {
+      "main": "src/chat/1.0.0.mo"
+    },
+    "main": {
+      "main": "src/main/Main.mo"
+    },
+    "user": {
+      "main": "src/user/1.0.0.mo"
+    }
+  },
+  "dfx": "0.9.3"
+}

@@ -1,0 +1,27 @@
+type v1_0_0 = 
+ record {
+   chats: vec Chat;
+   name: text;
+ };
+type User = 
+ service {
+   addChat: (Chat) -> ();
+   "empty": () -> ();
+   getChats: () -> (vec Chat) query;
+   getState: () -> (State) query;
+   getVersion: () -> (text) query;
+   receiveMessage: (Message) -> ();
+ };
+type State = 
+ record {
+   chats: vec Chat;
+   name: text;
+ };
+type Message = 
+ record {
+   content: text;
+   from: Member;
+ };
+type Member = record {name: text;};
+type Chat = record {name: text;};
+service : (v1_0_0) -> User

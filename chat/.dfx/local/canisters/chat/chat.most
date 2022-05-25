@@ -1,0 +1,7 @@
+// Version: 1.0.0
+type Chat = {name : Text};
+type Member = {name : Text};
+type Message = {content : Text; from : Member};
+actor {
+  stable var state : {members : [Member]; messages : [Message]; name : Chat}
+};

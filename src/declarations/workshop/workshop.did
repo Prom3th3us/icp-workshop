@@ -1,0 +1,16 @@
+type State = 
+ record {
+   entity: Entity;
+   events: List;
+ };
+type List = 
+ opt record {
+       Event;
+       List;
+     };
+type Event = variant {initEvent: record {value: Entity;};};
+type Entity = nat;
+type Command = variant {initCommand: record {value: Entity;};};
+service : {
+  action: (Command) -> (opt State);
+}

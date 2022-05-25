@@ -1,0 +1,5 @@
+// Version: 1.0.0
+type Chat = {name : Text};
+actor {
+  stable var state : {chats : [Chat]; name : Text}
+};
